@@ -1,0 +1,151 @@
+.section button{
+    border: none;
+}
+
+.chat-btn{
+    position: fixed;
+    right:50px;
+    bottom: 50px;
+    background: #f18ab8;
+    color: white;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+}
+
+.chat-btn:hover, .submit:hover{
+    opacity: 1;
+}
+#emoji-btn:hover{
+   filter: drop-shadow(0 0 3px #000);
+}
+
+.chat-popup{
+    display: none;
+    position: fixed;
+    bottom:150px;
+    right:50px;
+    height: 400px;
+    width: 300px;
+    background-color: white;
+    flex-direction: column;
+    justify-content: space-between;
+    padding:15px;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+@media (max-width:425px) {
+.chat-popup{
+    left: 6%;
+    height: 400px;
+    width: calc(85% - 20px);
+}
+}
+
+@media (max-width:320px) {
+    #emoji-btn{
+        display: none;
+    }
+    }
+
+.show{
+    display: flex;
+}
+
+.chat-area{
+    height: 85%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.income-msg{
+    display: flex;
+    align-items: center;
+}
+
+.avatar{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.income-msg .msg{
+    background-color: #f9cdde;
+    color: black;
+    padding:10px;
+    border-radius: 25px;
+    margin-left: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+}
+
+.badge{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #f18ab8;
+    color:white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top:-10px;
+    right: -10px;
+}
+
+.input-area{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+input[type="text"]{
+    width:100%;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    border-radius: 8px;
+    height:35px;
+}
+
+#emoji-btn{
+    position: absolute;
+    font-size: 25px;
+    background: transparent;
+    right: 50px;
+    top:2px;
+    opacity:1;
+}
+
+.submit{
+    padding:4px 8px;
+    margin-left:10px;
+    background-color: #f18ab8;
+    color:white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    opacity: 0.7;
+}
+
+
+.out-msg{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.my-msg{
+    display: flex;
+    justify-content: flex-end;
+    margin: 15px;
+    padding: 10px;
+    background-color: #f18ab8;
+    color:white;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    word-break: break-all;
+}
