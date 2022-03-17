@@ -580,6 +580,13 @@
     text-indent: 30px;
     font-weight: 700;
 }
+#relatedproducts img {
+	opacity: 1;
+	filter: grayscale(0%);
+  }
+  #relatedproducts img:hover {
+	box-shadow: 0 0 15px 1px var(--pink,  #f18ab8ff);
+  }  
 
 /*---magzinezoom---*/
 .app-figure {
@@ -720,7 +727,7 @@
 }
 #nav_bar a {
 	display: inline-block;
-	width: 30px;
+	width: 40px;
 	margin: 0 10px;
 }
 #nav_bar a:hover {
