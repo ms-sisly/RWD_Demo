@@ -71,17 +71,18 @@
 	position: absolute;
 	right:40px;
 }
-#main-nav a, .highlight_txt {
+#main-nav a {
   display: block;
   color: var(--grey, #545454ff);
   width: 120px;
   line-height: calc(var(--size_normal, 10px)*4);
   text-align: center;
-  font-weight: noraml;
+  font-weight:normal;
   margin-left: 40px;
   background-color: var(--white, #ffffffff);
   overflow: hidden;
 }
+
  /* 滑鼠滑入作用按鈕變色*/
 #main-nav a:hover, #main-nav a:active {
   color: var(--pink, #f18ab8ff);
@@ -424,7 +425,7 @@
 	background-color: var(--piggy, #fae4eeff);
 	font-size: var(--normal, 16px);
 	margin: 10px 0;
-	width: 99%;
+	width:calc(100% - 20px);
 	height: 30px;
 	padding: 10px;
 	box-sizing: content-box;
