@@ -70,7 +70,6 @@
 	visibility: visible;
 }
 #main-nav a {
-  display: block;
   float: none;
   color: var( --pink, #f18ab8ff);
   width: 100%;
@@ -90,6 +89,11 @@
   float: none;
   position: relative;
 }
+.highlight_txt {
+  border-bottom: 3px solid var(--empty, #ffffff00);
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  color:var( --grey, #545454ff) !important;
+}
 
  /*針對第二層選單*/
 #main-nav li li a{
@@ -105,24 +109,34 @@
 }
 @media (max-width:425px) {
   #main-nav li li a {
-    margin-right: -15px;
+    margin-right: 10px;
+}
+}
+@media (max-width:375px) {
+  #main-nav li li a {
+    margin-right: 0;
+}
+}
+@media (max-width:320px) {
+  #main-nav li li a {
+    margin-right: -10px;
 }
 }
 
 
 #main-nav ul ul {
-  transform: translate(450%, -75%);
+  transform: translate(450%, -67%);
   visibility: hidden;
 }
 @media (max-width:768px) {
   #main-nav ul ul {
-    transform: translate(400%, -75%);
+    transform: translate(400%, -67%);
   }
 }
 
 @media (max-width:640px) {
   #main-nav ul ul {
-    transform: translate(250%, -75%);
+    transform: translate(250%, -67%);
   }
 }
 #main-nav ul ul a{
@@ -137,6 +151,7 @@
 .menu > div > div > ul > li > a{
   transition: color .4s ease;
 }
+
 
 /*----漢堡選單設定----*/
 .toggler{
@@ -240,8 +255,8 @@
 .menu > div{
   background: rgba(255,255,255,0.9);
   border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
+  width: 300vw;
+  height: 300vw;
   display: flex;
   flex:none;
   align-items: center;
@@ -249,6 +264,7 @@
   transform: scale(0);
   transition: all .4s ease;
 }
+
 
 .menu > div > div {
   text-align: center;
@@ -261,9 +277,7 @@
   display: block;
 }
 
-#main-nav .menu > div > div > ul > li{
-  padding: 10px;
-}
+
 
 
 /*----SNS選單設定----*/
@@ -424,7 +438,8 @@
   text-align: center;
 }
 #contact_form, #map{
-	width:95%;
+	width: calc(100% - 20px);
+  padding: 10px;
   float: none;
   margin-bottom: 30px;
 }
@@ -518,6 +533,21 @@
   width: 40px;
   height: 40px;
   line-height: 40px;
+}
+@media (max-width:425px) {
+  .size-list a {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+}
+@media (max-width:375px) {
+  .size-list a {
+    margin: 5px;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+  }
 }
 #relatedproducts h3 {
 text-align: center;
@@ -740,6 +770,10 @@ text-align: center;
   left: 0;
   float: none;
 }
+.small_layout {
+  width: 100%;
+}
+
 @media (max-width:768px) {
   .features_box{
     display: block;
@@ -754,23 +788,11 @@ text-align: center;
     margin-bottom: 20px;
     box-sizing: border-box;
   }
-  .small_layout {
-    width: 100%;
 }
 
-  .step h4 {
-    font-size: var(--h3, 24px);
-    margin-bottom: 20px;
-  }
-  .step p {
-    font-size: var(--normal, 16px);
-    line-height: calc(var(--size_basic, 0.1)*11);
-  }
-}
-
-@media (max-width:425px) {
+@media (max-width:580px) {
   .back_line {
-    background-image: repeating-linear-gradient( var(--piggy, #fae4eeff) 22%, var(--pink, #f18ab8ff) 27%,var(--piggy, #fae4eeff) 32%, var(--piggy, #fae4eeff) );
+    background-image: repeating-linear-gradient( var(--piggy, #fae4eeff) 26%, var(--pink, #f18ab8ff) 30%,var(--piggy, #fae4eeff) 32%, var(--piggy, #fae4eeff) );
 }
   .step h4 {
     font-size: var(--sub, 20px);
@@ -780,17 +802,35 @@ text-align: center;
     font-size: var(--small, 14px);
     line-height: calc(var(--size_basic, 0.1)*12);
   }
+  #maincontact {
+    width: 100% ;
+    padding: 0;
+}
 }
 
-@media (max-width:375px) {
-  .back_line {
-    background-image: repeating-linear-gradient( var(--piggy, #fae4eeff) 22%, var(--pink, #f18ab8ff) 28%,var(--piggy, #fae4eeff) 33%, var(--piggy, #fae4eeff) );
-}
+@media (max-width:425px) {
+  .step {
+    width: 100%;
+    float: none;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted var(--pink, #f18ab8ff);
+    padding-bottom: 15px;
+  }
+  .step span{
+    margin: 15px 10px 5px;
+    width: 35px;
+    height: 35px;
+    line-height: calc(var(--size_normal, 10px)*3.5);
+  }
   .step h4 {
-    font-size: var(--des, 18px);
+    margin:-10px 0 0;
   }
   .step p {
-    font-size: var(--mini, 12px);
+    font-size:  var(--sub, 20px);
   }
+  .back_line {
+    background-image: none;
+}
+
 }
 
